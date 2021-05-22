@@ -28,6 +28,7 @@ class FullScreenApp(object):
 
 
 def start_streaming(event):
+    print("stream_started")
     twitch_pre_url = "rtmp://live.twitch.tv/app/"
     start_button.configure(bg="#00ff00")
     stop_button.configure(bg="#eeeeee")
@@ -36,7 +37,7 @@ def start_streaming(event):
 
 
 def stop_streaming(event):
-    print("Hello Python", "Hello World")
+    print("stream finished")
     stop_button.configure(bg="#ff0000")
     start_button.configure(bg="#eeeeee")
     S_HANDLER.stop_streaming()
